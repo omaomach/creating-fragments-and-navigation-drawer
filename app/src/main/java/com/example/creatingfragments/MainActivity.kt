@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val button1: Button = findViewById(R.id.button1)
         val button2: Button = findViewById(R.id.button2)
         val button3: Button = findViewById(R.id.button3)
+        val button4: Button = findViewById(R.id.button4)
         drawerLayout= findViewById(R.id.drawer_layout)
 
 
@@ -51,6 +52,11 @@ class MainActivity : AppCompatActivity() {
 
         button3.setOnClickListener() {
             var i = Intent(this, ViewPager::class.java)
+            startActivity(i)
+        }
+
+        button4.setOnClickListener() {
+            var i = Intent(this, TabLayout::class.java)
             startActivity(i)
         }
 
