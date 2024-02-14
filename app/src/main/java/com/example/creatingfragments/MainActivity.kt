@@ -9,6 +9,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.example.creatingfragments.fragments.Fragment1
+import com.example.creatingfragments.fragments.Fragment2
+import com.example.creatingfragments.fragments.HomeFragment
+import com.example.creatingfragments.fragments.LoginFragment
+import com.example.creatingfragments.fragments.MessagesFragment
+import com.example.creatingfragments.fragments.SettingsFragment
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -56,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         // functionality for the nav drawer
         val navView : NavigationView = findViewById(R.id.nav_view)
-        navView.setBackgroundColor(Color.RED)
+        navView.setBackgroundColor(Color.GRAY)
         navView.setNavigationItemSelectedListener {
             it.isChecked = true
             when(it.itemId) {
