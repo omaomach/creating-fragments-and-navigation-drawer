@@ -1,5 +1,6 @@
 package com.example.creatingfragments
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         val button1: Button = findViewById(R.id.button1)
         val button2: Button = findViewById(R.id.button2)
+        val button3: Button = findViewById(R.id.button3)
         drawerLayout= findViewById(R.id.drawer_layout)
 
 
@@ -45,6 +47,11 @@ class MainActivity : AppCompatActivity() {
             val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.frame2, fragment2).commit()
 
+        }
+
+        button3.setOnClickListener() {
+            var i = Intent(this, ViewPager::class.java)
+            startActivity(i)
         }
 
         toggle = ActionBarDrawerToggle(
